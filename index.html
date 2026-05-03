@@ -1,12 +1,522 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title>Testing</title>
-   <meta name="og:title" content="">
-   <meta name="og:image" content="https://harshadteli.github.io/neha-art/logo/logo.jpeg">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Added Custom SEO Tags -->
+<meta name="description" content="Neha Mehndi Art - The Mehndi Artist. Explore premium 3D designs, Arabic fusion, and traditional henna art in Kolhapur. Book your appointment now for weddings and special events.">
+<meta name="keywords" content="Neha Mehndi Art, Bridal Mehndi, 3D Mehndi Designs, Arabic Mehndi, Henna Artist Kolhapur, Wedding Mehndi, Professional Henna Art, Cinematic Mehndi">
+<meta name="subject" content="Exquisite Bridal Mehndi and Henna Services">
+<meta name="copyright" content="Neha Mehndi Art">
+<meta name="language" content="English">
+<meta name="robots" content="index,follow">
+<meta name="revised" content="Sunday, May 4th, 2025">
+<meta name="abstract" content="Premium Bridal Mehndi services specializing in 3D interactive designs and traditional henna artistry for modern brides.">
+<meta name="topic" content="Bridal Mehndi Artistry">
+<meta name="summary" content="Official website of Neha Mehndi Art. Discover stunning bridal henna, 3D designs, and book professional services instantly.">
+<meta name="classification" content="Art & Professional Services">
+<meta name="author" content="Neha Mehndi Art">
+<meta name="designer" content="Harshad Teli">
+<meta name="owner" content="Neha">
+<meta name="directory" content="Art & Services">
+<meta name="pagename" content="Neha Mehndi Art - Home of Premium Bridal Designs">
+<meta name="category" content="Professional Mehndi Services">
+<meta name="coverage" content="Worldwide">
+<meta name="distribution" content="Global">
+<!-- Mobile and Device Optimization -->
+<meta name="rating" content="General">
+<meta name="revisit-offer" content="7 days">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="date" content="May 04, 2025">
+<meta name="DC.title" content="Neha Mehndi Studio | Premium 3D Mehndi Experience">
+<meta name="medium" content="website">
+<!-- Search Engine Verification -->
+<meta name="google-site-verification" content="B3a3ZbAh_Xv1_U0zF5mqbKrUp80nEmUqpMu7ZdiwMQI" />
+<!-- Open Graph Tags (WhatsApp, Facebook, Twitter, Instagram, LinkedIn) -->
+<meta property="og:title" content="Neha Mehndi Studio | Premium 3D Mehndi Experience">
+<meta property="og:description" content="Experience the magic of 3D Mehndi and traditional bridal designs. Book your appointment today for a truly cinematic experience.">
+<meta property="og:image" content="https://harshadteli.github.io/neha-art/logo/logo.jpeg">
+<meta property="og:url" content="https://nehaart.vercel.app">
+<meta property="og:site_name" content="Neha Mehndi Studio">
+<meta property="og:type" content="website">
+<meta property="og:email" content="nehasutar733@gmail.com">
+<meta property="og:phone_number" content="+91 91129 11729">
+<meta property="og:locality" content="Mahe, Kolhapur">
+<meta property="og:region" content="Maharashtra">
+<meta property="og:country_name" content="India">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Neha Mehndi Studio | Exquisite Bridal Henna">
+<meta name="twitter:description" content="Stunning 3D and traditional bridal mehndi designs. Transform your special day with professional henna art.">
+<meta name="twitter:image" content="https://harshadteli.github.io/neha-art/logo/logo.jpeg">
+<!-- Apple Mobile Web Tags -->
+<meta name="apple-mobile-web-title" content="Neha Mehndi Studio">
+<meta name="apple-mobile-web-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="https://harshadteli.github.io/neha-art/logo/logo.jpeg">
+<!-- Internet Explorer / MS Application Tags -->
+<meta name="application-name" content="Neha Mehndi Studio">
+<meta name="msapplication-tooltip" content="Professional Bridal Mehndi and Henna Art Services">
+<meta name="msapplication-starturl" content="index.html">
+<!-- Link Tags -->
+<link rel="canonical" href="https://nehaart.vercel.app">
+<link rel="shortcut icon" href="https://harshadteli.github.io/neha-art/logo/logo.jpeg" type="image/x-icon">
+<!-- Fonts and Global Styles Reference -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<title>Neha Mehndi Studio | Premium 3D Mehndi Experience</title>
+<!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css?v=125" />
+  <link rel="shortcut icon" href="https://harshadteli.github.io/neha-art/logo/logo.jpeg" type="image/x-icon">
 </head>
 <body>
-<marquee>
-<h1>Coming Soon...</h1>
-</marquee>
+
+  <!-- Mouse Trail Overlay -->
+  <canvas id="trailCanvas"></canvas>
+
+  <!-- ───────────────── LOADER ───────────────── -->
+  <!-- <div id="loader">
+    <div class="loader-inner">
+      <img src="logo/logo.jpeg" alt="Neha Mehndi Art Logo" class="loader-logo" />
+      <div class="loader-spinner"></div>
+      <p class="loader-text">Crafting Your Experience…</p>
+    </div>
+  </div> -->
+
+  <!-- ───────────────── NAVBAR ───────────────── -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <img src="logo/logo.jpeg" alt="Logo" class="nav-logo" />
+        <span class="nav-title">Neha Mehndi Studio</span>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#why-neha" class="nav-link">Why Neha?</a></li>
+        <li><a href="booking.html" class="nav-link">Book Now</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="memories.html" class="nav-link">Memories</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="admin.html" class="nav-link admin-link" target="_blank" title="Admin Portal"><i class="fa-solid fa-user-gear"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ───────────────── HERO SECTION ───────────────── -->
+  <section id="hero">
+    <!-- Direct video background -->
+    <video id="bgVideo" class="hero-video" autoplay muted playsinline></video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tag">✦ Premium Mehndi Art ✦</p>
+      <h1 class="hero-title">Where <em>Art</em> Meets<br /><span class="gold-text">Elegance</span></h1>
+      <p class="hero-sub">Bridal · Arabic · Custom Henna — Handcrafted for Your Special Moment</p>
+      <div class="hero-cta">
+        <button id="bookNowBtn" class="btn-primary" onclick="openContact()">Book Your Appointment</button>
+        <button class="btn-outline" onclick="scrollToSection('gallery')">View Gallery</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Designs</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Years Exp.</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Natural</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll to Explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+
+
+  <!-- ───────────────── GALLERY SECTION ───────────────── -->
+  <section id="gallery">
+    <div class="section-header">
+      <p class="section-tag">✦ Portfolio ✦</p>
+      <h2>Our <span class="gold-text">Masterpieces</span></h2>
+      <p class="section-sub">Every design tells a story — find yours</p>
+    </div>
+    <div class="marquee-container">
+      <div class="marquee-track" id="marqueeTrack1">
+        <!-- populated by JS -->
+      </div>
+    </div>
+    <div class="marquee-container" style="margin-top: 1.5rem;">
+      <div class="marquee-track reverse" id="marqueeTrack2">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── SERVICES SECTION ───────────────── -->
+  <section id="services">
+    <div class="section-header">
+      <p class="section-tag">✦ Packages ✦</p>
+      <h2>Choose Your <span class="gold-text">Experience</span></h2>
+    </div>
+    <div class="services-grid" id="packagesContainer">
+      <!-- Loading State -->
+      <div class="service-card" style="grid-column: 1/-1; text-align: center;">
+        <div class="loader" style="display:inline-block; margin-bottom:1rem;"></div>
+        <p>Loading our latest packages...<br>Please wait.....</p>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ───────────────── WHY CHOOSE US ───────────────── -->
+  <section id="why-neha">
+    <div class="features-container">
+      <div class="features-content">
+        <p class="section-tag">✦ Excellence in Art ✦</p>
+        <h2>Why Choose <span class="gold-text">Neha's Art?</span></h2>
+        <p class="features-intro">We don't just apply Henna; we create interactive masterpieces that tell your story.</p>
+        
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-text">
+              <h4>Interactive Designs</h4>
+              <p>Designs that flow with your body's natural curves and movements for a living art experience.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🌿</div>
+            <div class="feature-text">
+              <h4>Premium Ingredients</h4>
+              <p>100% Organic Henna paste prepared fresh for every client, ensuring skin safety.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">⏳</div>
+            <div class="feature-text">
+              <h4>Lasting Impression</h4>
+              <p>Guaranteed deep, rich stains that stay vibrant for weeks, leaving a memory to cherish.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="features-image">
+        <div class="image-wrapper">
+          <img src="images/m12.jpeg" alt="Interactive Mehndi Design" class="feature-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ───────────────── ABOUT SECTION ───────────────── -->
+  <section id="about">
+    <div class="about-container">
+      <div class="about-media">
+        <video src="3d/special.mp4" autoplay muted loop playsinline class="about-img"></video>
+        <div class="about-badge">
+          <span class="badge-num">3+</span>
+          <span class="badge-label">Years of Art</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="section-tag">✦ About the Artist ✦</p>
+        <h2>Passion in <span class="gold-text">Every Stroke</span></h2>
+        <p>Neha is a celebrated Mehndi artist with over 3 years of experience creating breathtaking designs for brides,
+          festivals, and special occasions across India. Her work blends traditional roots with contemporary aesthetics
+          — each design is a wearable masterpiece.</p>
+        <p>Using only 100% natural henna sourced from Rajasthan, every application is safe, skin-friendly, and
+          guaranteed to give a rich, dark stain.</p>
+        <div class="about-highlights">
+          <div class="highlight"><span>🌿</span> 100% Natural Henna</div>
+          <div class="highlight"><span>🏆</span> Award-Winning Artist</div>
+          <div class="highlight"><span>📍</span> Home & Studio Visits</div>
+          <div class="highlight"><span>💍</span> 50+ Happy Brides</div>
+        </div>
+        <a href="about.html" class="btn-primary">Learn More About Neha's Art</a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── TESTIMONIALS ───────────────── -->
+  <section id="testimonials">
+    <div class="section-header">
+      <p class="section-tag">✦ Reviews ✦</p>
+      <h2>What Brides <span class="gold-text">Say</span></h2>
+    </div>
+    <div class="testimonials-track" id="testimonialsTrack">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Neha's bridal mehndi was absolutely stunning! Every guest was asking about it. The design lasted for 3
+          weeks!"</p>
+        <div class="client-info"><strong>Srushti Yadav</strong> - Bridal Mehndi.</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★</div>
+        <p>"The arabic pattern she created was beyond imagination. Quick, professional, and the colour was so dark!"</p>
+        <div class="client-info"><strong>Harshda Patil</strong> – Arabic Mehndi.</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★</div>
+        <p>"Booked for my sister's wedding. Neha came home, was so professional and the work was flawless. 10/10!"</p>
+        <div class="client-info"><strong>Prajkta More</strong> – Home Visit.</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"I wanted a custom mandala design. Neha listened perfectly and the result was exactly my dream. Highly
+          recommend!"</p>
+        <div class="client-info"><strong>Tejswini Kumbhar</strong> – Custom Design.</div>
+      </div>
+    </div>
+    <div class="testimonial-dots" id="testimonialDots"></div>
+  </section>
+
+  <!-- ───────────────── CONTACT MODAL ───────────────── -->
+  <div id="contactModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Contact Form">
+    <div class="modal-box glass-card">
+      <button class="modal-close" id="closeModal" aria-label="Close">&times;</button>
+      <div class="modal-header">
+        <img src="logo/logo.jpeg" alt="Logo" class="modal-logo" />
+        <h2>Book Your <span class="gold-text">Appointment</span></h2>
+        <p>Fill in the details and we'll contact you within 24 hours</p>
+      </div>
+      <form id="inquiryForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clientName">Full Name *</label>
+            <input type="text" id="clientName" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="clientPhone">Phone Number *</label>
+            <input type="tel" id="clientPhone" name="phone" placeholder="+91 XXXXX XXXXX" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="eventDate">Event Date *</label>
+            <input type="date" id="eventDate" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="mehndType">Type of Mehndi *</label>
+            <select id="mehndType" name="type" required>
+              <option value="">Select Type</option>
+              <option value="Bridal">Bridal Mehndi</option>
+              <option value="Arabic">Arabic Mehndi</option>
+              <option value="Custom">Custom Design</option>
+              <option value="Festival">Festival Mehndi</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="clientAddress">Venue Address *</label>
+          <input type="text" id="clientAddress" name="address" placeholder="Area, Building, Landmark..." required />
+        </div>
+        <div class="form-group">
+          <label for="clientMessage">Additional Notes</label>
+          <textarea id="clientMessage" name="message" placeholder="Any special requests or design preferences…"
+            rows="2"></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-full" id="submitBtn">
+          <span class="btn-text">Send Inquiry</span>
+          <span class="btn-loader" style="display:none">Sending…</span>
+        </button>
+      </form>
+      <div class="form-success" id="formSuccess" style="display:none">
+        <div class="success-icon">✓</div>
+        <h3>Inquiry Sent!</h3>
+        <p>We will contact you within 24 hours. Thank you for choosing Neha Mehndi Art!</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ───────────────── FLOATING CHATBOT ───────────────── -->
+  <div id="chatbotBubble" class="chatbot-bubble" title="Chat with Neha's Assistant">
+    <span class="chatbot-icon">🤖</span>
+    <span class="chatbot-pulse"></span>
+  </div>
+  <div id="chatbotPanel" class="chatbot-panel glass-card" style="display:none">
+    <div class="chatbot-header">
+      <img src="logo/logo.jpeg" alt="Logo" class="chatbot-logo" />
+      <div>
+        <strong>Neha's AI Assistant</strong>
+        <span class="chatbot-status">Online</span>
+      </div>
+      <button class="chatbot-close" id="closeChatbot">&times;</button>
+    </div>
+    <div class="chatbot-messages" id="chatMessages">
+      <div class="bot-msg">
+        👋 Namaste! I'm Neha's virtual assistant. I can help you with:<br />
+        • <b>Pricing</b> &amp; <b>Packages</b><br />
+        • <b>Booking</b> an appointment<br />
+        • <b>Mehndi types</b> &amp; designs<br />
+        How can I help you today?
+      </div>
+    </div>
+    <div class="chatbot-quick-btns">
+      <button onclick="quickReply('pricing')">💰 Pricing</button>
+      <button onclick="quickReply('book')">📅 Book Now</button>
+      <button onclick="quickReply('types')">🎨 Mehndi Types</button>
+      <button onclick="quickReply('contact')">📞 Contact</button>
+    </div>
+    <div class="chatbot-input-row">
+      <input type="text" id="chatInput" placeholder="Type your message…" />
+      <button id="chatSendBtn" onclick="sendChat()">➤</button>
+    </div>
+  </div>
+
+  <!-- ───────────────── FLOATING CALL BUTTON ───────────────── -->
+  <div id="callBtn" class="call-btn" title="Connect with Neha">
+    <span class="call-icon"><i class="fa-solid fa-phone"></i></span>
+    <span class="call-pulse"></span>
+  </div>
+  <div id="callPanel" class="call-panel glass-card" style="display:none">
+    <button class="panel-close" id="closeCallPanel">&times;</button>
+    <div class="panel-header">
+      <p><strong>Connect with Neha</strong></p>
+      <span>Quick Response Guaranteed</span>
+    </div>
+    
+    <a href="tel:+919112911729" class="call-option tel-call">
+      <i class="fa-solid fa-phone-volume"></i> Call Directly
+    </a>
+    <a href="https://wa.me/919112911729?text=Hi%20Neha!%20I%20want%20to%20book%20a%20Mehndi%20appointment."
+      class="call-option whatsapp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp Chat
+    </a>
+    <a href="https://www.instagram.com/neha_mehndi_art05?igsh=MTJoZHlycGgwb2gyNQ==" class="call-option instagram" target="_blank">
+      <i class="fa-brands fa-instagram"></i> Follow Instagram
+    </a>
+    <a href="mailto:nehasutar733@gmail.com" class="call-option email">
+      <i class="fa-solid fa-envelope"></i> Send an Email
+    </a>
+  </div>
+
+  <!-- ───────────────── REVIEWS SECTION ───────────────── -->
+  <section id="reviews" class="section-padding">
+    <div class="container">
+      <div class="section-header" data-reveal="bottom">
+        <span class="subheading">Client Love</span>
+        <h2 class="section-title">Wall of Love</h2>
+        <p class="section-subtitle">Real feedback from our happy clients across the globe.</p>
+        <button class="btn-primary" onclick="openReviewModal()" style="margin-top: 1rem;">
+          <i class="fa-solid fa-pen-to-square"></i> Add Your Review
+        </button>
+      </div>
+      <div id="reviewsContainer" class="reviews-grid">
+        <!-- Reviews will be loaded here dynamically -->
+        <div class="review-loading">
+          <div class="loader"></div>
+          <p>Loading love notes...<br>Please wait..</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── ADD REVIEW MODAL ───────────────── -->
+  <div id="reviewModal" class="modal-overlay" style="display:none">
+    <div class="modal-box glass-card">
+      <button class="modal-close" onclick="closeReviewModal()">&times;</button>
+      <div class="modal-header">
+        <h2>Share Your Experience</h2>
+        <p>Your feedback means the world to us!</p>
+      </div>
+      <form id="reviewForm" onsubmit="submitReview(event)">
+        <div class="form-group">
+          <label for="revName">Your Name</label>
+          <input type="text" id="revName" required placeholder="e.g. Priya Sharma" />
+        </div>
+        <div class="form-group">
+          <label for="revFeedback">Your Feedback</label>
+          <textarea id="revFeedback" required rows="4" placeholder="Tell us what you loved about Neha's work..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" id="revSubmitBtn" style="width:100%">
+          Submit Review
+        </button>
+      </form>
+      <div id="reviewSuccess" style="display:none; text-align:center; padding:2rem;">
+        <div class="success-icon">✨</div>
+        <h3>Review Received!</h3>
+        <p>Thank you for sharing your experience. Your review will be visible soon!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ───────────────── FOOTER ───────────────── -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="logo/logo.jpeg" alt="Logo" class="footer-logo" />
+        <p class="footer-tagline">Crafting memories, one stroke at a time.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/neha_mehndi_art05?igsh=MTJoZHlycGgwb2gyNQ==" aria-label="Instagram" class="social-link" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#services">Services & Pricing</a></li>
+          <li><a href="#why-neha">Why Neha?</a></li>
+          <li><a href="#about">About Neha</a></li>
+          <li><a href="contact.html">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Bridal Mehndi</a></li>
+          <li><a href="#">Arabic Mehndi</a></li>
+          <li><a href="#">Custom Designs</a></li>
+          <li><a href="#">Festival Mehndi</a></li>
+          <li><a href="#">Corporate Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Mahe, Karveer Taluka, Kolhapur District, Maharashtra-416001, India</p>
+        <p><i class="fa-solid fa-phone"></i> +91 9112911729</p>
+        <p><i class="fa-solid fa-envelope"></i> nehasutar733@gmail.com</p>
+        <p><i class="fa-solid fa-clock"></i> Mon – Sat: 9 AM – 8 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Neha Mehndi Creations | All Rights Reserved | Made with ❤️ &amp; Henna</p>
+      <div style="margin-top: 10px; border-top: 1px solid rgba(212, 175, 55, 0.1); padding-top: 10px;">
+        <marquee behavior="scroll" direction="left" scrollamount="5" style="color: var(--gold-light); font-size: 0.75rem;">
+          <i class="fa-solid fa-code" style="color: var(--gold-light);"></i> Developed by: <strong>HarshTech  Solutions</strong> &nbsp;&nbsp; | &nbsp;&nbsp; 
+          <i class="fa-solid fa-envelope" style="color: var(--gold-light);"></i> harshadteli697@gmail.com &nbsp;&nbsp; | &nbsp;&nbsp; 
+          <i class="fa-solid fa-phone" style="color: var(--gold-light);"></i> +91 9970898012
+        </marquee>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ───────────────── BACK TO TOP ───────────────── -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- ───────────────── LIGHTBOX MODAL ───────────────── -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-nav prev" id="lbPrev">&#10094;</button>
+    <img id="lightboxImg" src="" alt="Mehndi Design" />
+    <button class="lightbox-nav next" id="lbNext">&#10095;</button>
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+  <!-- Scripts -->
+  <script src="config.js?v=126"></script>
+  <script src="main.js?v=126"></script>
 </body>
+
 </html>
