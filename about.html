@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn more about Neha, the lead artist behind Neha Mehndi Art. Discover her journey, expertise in 3D designs, and passion for traditional bridal henna." />
+  <meta name="keywords" content="About Neha, Mehndi Artist Biography, Neha Mehndi Art History, Professional Henna Artist Journey" />
+  <meta property="og:title" content="About the Artist | Neha Mehndi Art" />
+  <meta property="og:description" content="The story behind Neha's exquisite 3D and traditional bridal mehndi art." />
+  <meta property="og:image" content="https://harshadteli.github.io/neha-art/logo/logo.jpeg" />
+  <title>About Neha Sutar | Neha Mehndi Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css?v=125" />
+  <link rel="shortcut icon" href="https://harshadteli.github.io/neha-art/logo/logo.jpeg" type="image/x-icon">
+</head>
+
+<body class="about-page">
+  <!-- Mouse Trail Overlay -->
+  <canvas id="trailCanvas"></canvas>
+
+  <!-- ───────────────── NAVBAR ───────────────── -->
+  <nav id="navbar" class="scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="logo/logo.jpeg" alt="Logo" class="nav-logo" />
+        <span class="nav-title">Neha Mehndi Studio</span>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#hero" class="nav-link">Home</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="booking.html" class="nav-link">Book Now</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="memories.html" class="nav-link">Memories</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="admin.html" class="nav-link admin-link" target="_blank" title="Admin Portal"><i class="fa-solid fa-user-gear"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ───────────────── PROFILE HERO ───────────────── -->
+  <section class="profile-hero">
+    <div class="profile-container">
+      <div class="profile-main" data-aos="fade-up">
+        <div class="profile-photo-wrapper">
+          <img src="logo/logo.jpeg" alt="Neha's Profile" class="profile-photo" />
+          <div class="photo-glow"></div>
+        </div>
+        <div class="profile-info">
+          <p class="section-tag">✦ The Artist ✦</p>
+          <h1>About <span class="gold-text">Neha</span></h1>
+          <p class="profile-bio">
+            With over 3+ years of dedicated experience, Neha has transformed the traditional art of Mehndi into a 
+            cinematic experience. Specialized in Bridal, Arabic, and 3D Interactive designs, her work is a fusion 
+            of heritage and modern elegance.
+          </p>
+          
+          <div class="profile-stats">
+            <div class="stat-item">
+              <span class="stat-val">3+</span>
+              <span class="stat-lab">Years Exp.</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val">50+</span>
+              <span class="stat-lab">Designs</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val">100%</span>
+              <span class="stat-lab">Organic Henna</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ───────────────── SPECIAL VIDEO SECTION ───────────────── -->
+  <section class="special-video-section">
+    <div class="container">
+      <div class="section-header text-center" style="margin-bottom: 3rem;">
+        <p class="section-tag" style="color: var(--primary-gold); font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 0.5rem;">✦ Masterpiece ✦</p>
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Experience the <span class="gold-text">Magic</span></h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Watch our featured 3D interactive mehndi design come to life in this special cinematic showcase.</p>
+      </div>
+      
+      <div class="special-video-container">
+        <div class="video-wrapper">
+          <video src="3d/special.mp4" autoplay muted loop playsinline class="special-video"></video>
+          <div class="video-overlay"></div>
+          <div class="video-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── CONTACT & SOCIALS ───────────────── -->
+  <section class="profile-contact">
+    <div class="container">
+      <h2 class="text-center mb-4">Let's <span class="gold-text">Connect</span></h2>
+      <div class="contact-grid">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919999999999" class="contact-card whatsapp-card" target="_blank">
+          <div class="card-inner">
+            <div class="card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <h4>WhatsApp</h4>
+            <p>Direct Message</p>
+          </div>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/neha_mehndi_art05?igsh=MTJoZHlycGgwb2gyNQ==" class="contact-card instagram-card" target="_blank">
+          <div class="card-inner">
+            <div class="card-icon"><i class="fa-brands fa-instagram"></i></div>
+            <h4>Instagram</h4>
+            <p>Portfolio Feed</p>
+          </div>
+        </a>
+
+        <!-- Phone -->
+        <a href="tel:+919112911729" class="contact-card phone-card">
+          <div class="card-inner">
+            <div class="card-icon"><i class="fa-solid fa-phone"></i></div>
+            <h4>Call Now</h4>
+            <p>Voice Inquiry</p>
+          </div>
+        </a>
+
+        <!-- Gmail -->
+        <a href="mailto:nehasutar733@gmail.com" class="contact-card email-card">
+          <div class="card-inner">
+            <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+            <h4>Gmail</h4>
+            <p>Email Inquiry</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── FLOATING CALL BUTTON ───────────────── -->
+  <div id="callBtn" class="call-btn" title="Connect with Neha">
+    <span class="call-icon"><i class="fa-solid fa-phone"></i></span>
+    <span class="call-pulse"></span>
+  </div>
+  <div id="callPanel" class="call-panel glass-card" style="display:none">
+    <button class="panel-close" id="closeCallPanel">&times;</button>
+    <div class="panel-header">
+      <p><strong>Connect with Neha</strong></p>
+      <span>Quick Response Guaranteed</span>
+    </div>
+    
+    <a href="tel:+919112911729" class="call-option tel-call">
+      <i class="fa-solid fa-phone-volume"></i> Call Directly
+    </a>
+    <a href="https://wa.me/919112911729?text=Hi%20Neha!%20I%20want%20to%20book%20a%20Mehndi%20appointment."
+      class="call-option whatsapp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp Chat
+    </a>
+    <a href="https://www.instagram.com/neha_mehndi_art05?igsh=MTJoZHlycGgwb2gyNQ==" class="call-option instagram" target="_blank">
+      <i class="fa-brands fa-instagram"></i> Follow Instagram
+    </a>
+    <a href="mailto:nehasutar733@gmail.com" class="call-option email">
+      <i class="fa-solid fa-envelope"></i> Send an Email
+    </a>
+  </div>
+
+  <!-- ───────────────── FOOTER ───────────────── -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="logo/logo.jpeg" alt="Logo" class="footer-logo" />
+        <p class="footer-tagline">Crafting memories, one stroke at a time.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/neha_mehndi_art05?igsh=MTJoZHlycGgwb2gyNQ==" aria-label="Instagram" class="social-link" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#services">Services & Pricing</a></li>
+          <li><a href="about.html">About Neha</a></li>
+          <li><a href="contact.html">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Mahe, Karveer Taluka, Kolhapur District, Maharashtra-416001, India</p>
+        <p><i class="fa-solid fa-phone"></i> +91 9112911729</p>
+        <p><i class="fa-solid fa-envelope"></i> nehasutar733@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Neha Mehndi Creation | All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="config.js?v=126"></script>
+  <script src="main.js?v=126"></script>
+</body>
+
+</html>

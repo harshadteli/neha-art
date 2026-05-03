@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book your Bridal Mehndi appointment with Neha. Professional 3D designs, Arabic fusion, and traditional henna services for weddings and festivals." />
+  <meta name="keywords" content="Book Mehndi, Bridal Mehndi Booking, Neha Mehndi Art, Professional Henna Artist, Wedding Mehndi Appointment" />
+  <meta property="og:title" content="Book Your Mehndi Appointment | Neha Mehndi Art" />
+  <meta property="og:description" content="Secure your special date for professional bridal and 3D mehndi services by Neha." />
+  <meta property="og:image" content="logo/logo.jpeg" />
+  <title>Book Appointment | Neha Mehndi Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css?v=125" />
+  <link rel="shortcut icon" href="https://harshadteli.github.io/neha-art/logo/logo.jpeg" type="image/x-icon">
+</head>
+
+<body class="booking-page">
+  <!-- Mouse Trail Overlay -->
+  <canvas id="trailCanvas"></canvas>
+
+  <!-- ───────────────── NAVBAR ───────────────── -->
+  <nav id="navbar" class="scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="logo/logo.jpeg" alt="Logo" class="nav-logo" />
+        <span class="nav-title">Neha Mehndi Studio</span>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#hero" class="nav-link">Home</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="booking.html" class="nav-link active">Book Now</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="memories.html" class="nav-link">Memories</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="admin.html" class="nav-link admin-link" target="_blank" title="Admin Portal"><i class="fa-solid fa-user-gear"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ───────────────── BOOKING HERO ───────────────── -->
+  <section class="booking-hero">
+    <div class="container text-center">
+      <p class="section-tag" data-aos="fade-up">✦ Reservations ✦</p>
+      <h1 data-aos="fade-up" data-aos-delay="100">Secure Your <span class="gold-text">Special Date</span></h1>
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
+        Professional Mehndi services for Weddings, Festivals, and Special Occasions.
+      </p>
+    </div>
+  </section>
+
+  <!-- ───────────────── BOOKING FORM SECTION ───────────────── -->
+  <section class="booking-form-section">
+    <div class="container">
+      <div class="booking-grid">
+        <!-- The Form -->
+        <div class="booking-form-card glass-card" data-aos="fade-right">
+          <div class="card-header">
+            <h3>Booking Inquiry</h3>
+            <p>Direct integration with our calendar</p>
+          </div>
+          <form id="bookingPageForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label><i class="fa-solid fa-user"></i> Full Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required />
+              </div>
+              <div class="form-group">
+                <label><i class="fa-solid fa-phone"></i> Phone Number</label>
+                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label><i class="fa-solid fa-calendar-day"></i> Preferred Date</label>
+                <input type="date" name="date" required />
+              </div>
+              <div class="form-group">
+                <label><i class="fa-solid fa-paint-brush"></i> Mehndi Type</label>
+                <select name="type" required>
+                  <option value="">Select Type</option>
+                  <option value="Bridal">Bridal Mehndi</option>
+                  <option value="Arabic">Arabic Mehndi</option>
+                  <option value="Custom">Custom Design</option>
+                  <option value="Side">Side Mehndi</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label><i class="fa-solid fa-location-dot"></i> Venue Address</label>
+              <textarea name="address" placeholder="Where should Neha come?" rows="2"></textarea>
+            </div>
+            <div class="form-group">
+              <label><i class="fa-solid fa-comment"></i> Special Requests</label>
+              <textarea name="message" placeholder="Tell us more about your event..." rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full">
+              Submit Booking Request <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <div id="bookingResult" class="mt-3 text-center"></div>
+          </form>
+        </div>
+
+        <!-- Info / Dynamic Status -->
+        <div class="booking-info" data-aos="fade-left">
+          <div class="info-card glass-card">
+            <i class="fa-solid fa-circle-check status-icon"></i>
+            <h4>Booking Status</h4>
+            <div class="status-checker">
+              <p>Check your current booking status:</p>
+              <div class="search-box">
+                <input type="text" id="statusPhone" placeholder="Enter Registered Phone" />
+                <button onclick="checkBookingStatus()"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+              <div id="statusResult" class="status-display"></div>
+            </div>
+          </div>
+
+          <div class="info-card glass-card mt-4">
+            <i class="fa-solid fa-clock-rotate-left status-icon"></i>
+            <h4>Current Availability</h4>
+            <p id="availabilityInfo">Loading latest updates from Admin...</p>
+            <div class="availability-indicator">
+              <span class="pulse-dot"></span> <span>Now Booking for 2025 Weddings</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── FLOATING CALL BUTTON ───────────────── -->
+  <div id="callBtn" class="call-btn" title="Connect with Neha">
+    <span class="call-icon"><i class="fa-solid fa-phone"></i></span>
+    <span class="call-pulse"></span>
+  </div>
+  <div id="callPanel" class="call-panel glass-card" style="display:none">
+    <button class="panel-close" id="closeCallPanel">&times;</button>
+    <div class="panel-header">
+      <p><strong>Connect with Neha</strong></p>
+      <span>Quick Response Guaranteed</span>
+    </div>
+    
+    <a href="tel:+919112911729" class="call-option tel-call">
+      <i class="fa-solid fa-phone-volume"></i> Call Directly
+    </a>
+    <a href="https://wa.me/919112911729?text=Hi%20Neha!%20I%20want%20to%20book%20a%20Mehndi%20appointment."
+      class="call-option whatsapp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp Chat
+    </a>
+    <a href="https://www.instagram.com/neha_mehndi_art05?igsh=MTJoZHlycGgwb2gyNQ==" class="call-option instagram" target="_blank">
+      <i class="fa-brands fa-instagram"></i> Follow Instagram
+    </a>
+    <a href="mailto:nehasutar733@gmail.com" class="call-option email">
+      <i class="fa-solid fa-envelope"></i> Send an Email
+    </a>
+  </div>
+
+  <!-- ───────────────── SUCCESS POPUP MODAL ───────────────── -->
+  <div id="bookingSuccessModal" class="success-modal">
+    <div class="success-modal-content glass-card">
+      <button class="success-close" id="closeSuccessModal">&times;</button>
+      <div class="success-icon-wrap">
+        <div class="success-circle">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="success-sparkle s1">✦</div>
+        <div class="success-sparkle s2">✦</div>
+      </div>
+      <h2 id="successGreeting">Congratulations!</h2>
+      <p id="successMessage">
+        Your booking request has been received. Neha will contact you shortly to discuss your beautiful designs and finalize your appointment.
+      </p>
+      <div class="success-instructions">
+        <p><i class="fa-solid fa-info-circle"></i> <strong>Next Step:</strong> Neha will review your preferred date and call you for a quick consultation.</p>
+      </div>
+      <button class="btn-primary" onclick="closeSuccess()">Got it, Thanks!</button>
+    </div>
+  </div>
+
+  <style>
+    .success-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(15px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .success-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+    .success-modal-content {
+      max-width: 500px;
+      width: 100%;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+      border: 1px solid var(--primary-gold);
+      transform: scale(0.8);
+      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1.2);
+    }
+    .success-modal.active .success-modal-content {
+      transform: scale(1);
+    }
+    .success-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+    .success-close:hover { opacity: 1; }
+    .success-icon-wrap {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 2rem;
+    }
+    .success-circle {
+      width: 100%;
+      height: 100%;
+      background: var(--primary-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: #000;
+      box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
+    }
+    .success-sparkle {
+      position: absolute;
+      color: var(--primary-gold);
+      font-size: 1.5rem;
+      animation: sparkle 2s infinite;
+    }
+    .s1 { top: -10px; right: -10px; animation-delay: 0.5s; }
+    .s2 { bottom: 0; left: -20px; animation-delay: 1s; }
+    @keyframes sparkle {
+      0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+      50% { transform: scale(1.5) rotate(45deg); opacity: 0.5; }
+    }
+    .success-modal h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: var(--primary-gold);
+    }
+    .success-modal p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .success-instructions {
+      background: rgba(212, 175, 55, 0.1);
+      border-radius: 15px;
+      padding: 1.2rem;
+      margin-bottom: 2.5rem;
+      border-left: 3px solid var(--primary-gold);
+      text-align: left;
+    }
+    .success-instructions p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #fff;
+    }
+  </style>
+
+  <script>
+    function closeSuccess() {
+      const modal = document.getElementById('bookingSuccessModal');
+      modal.classList.remove('active');
+      setTimeout(() => { modal.style.display = 'none'; }, 400);
+    }
+    document.getElementById('closeSuccessModal')?.addEventListener('click', closeSuccess);
+  </script>
+
+  <!-- ───────────────── FOOTER ───────────────── -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="logo/logo.jpeg" alt="Logo" class="footer-logo" />
+        <p class="footer-tagline">Crafting memories, one stroke at a time.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/neha_mehndi_art05?igsh=MTJoZHlycGgwb2gyNQ==" aria-label="Instagram" class="social-link" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Mahe, Karveer Taluka, Kolhapur District, Maharashtra-416001, India</p>
+        <p><i class="fa-solid fa-phone"></i> +91 9112911729</p>
+        <p><i class="fa-solid fa-envelope"></i> nehasutar733@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Neha Mehndi Creations | All Rights Reserved.</p>
+      <div style="margin-top: 10px; border-top: 1px solid rgba(212, 175, 55, 0.1); padding-top: 10px;">
+        <marquee behavior="scroll" direction="left" scrollamount="5" style="color: var(--gold-light); font-size: 0.75rem;">
+          <i class="fa-solid fa-code" style="color: var(--gold-light);"></i> Developed by: <strong>HarshTech  Solutions</strong> &nbsp;&nbsp; | &nbsp;&nbsp; 
+          <i class="fa-solid fa-envelope" style="color: var(--gold-light);"></i> harshadteli697@gmail.com &nbsp;&nbsp; | &nbsp;&nbsp; 
+          <i class="fa-solid fa-phone" style="color: var(--gold-light);"></i> +91 9970898012
+        </marquee>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js?v=126"></script>
+  <script src="main.js?v=126"></script>
+  <script>
+    async function loadAvailability() {
+      const URL = CONFIG.GAS_URL;
+      try {
+        const res = await fetch(`${URL}?action=getSettings`);
+        const settings = await res.json();
+        if (settings.availability) {
+          document.getElementById('availabilityInfo').innerText = settings.availability;
+        }
+      } catch (e) {
+        document.getElementById('availabilityInfo').innerText = "Open for 2025 Bookings";
+      }
+    }
+
+    async function checkBookingStatus() {
+      const phoneInput = document.getElementById('statusPhone').value.trim();
+      const res = document.getElementById('statusResult');
+      if (!phoneInput) {
+        res.innerHTML = '<span style="color:#ff4d4d">Please enter your phone number.</span>';
+        return;
+      }
+      res.innerHTML = '<div class="loader" style="width:20px; height:20px; margin: 10px auto;"></div>';
+      
+      try {
+        const response = await fetch(`${CONFIG.GAS_URL}?action=getBookings`);
+        const data = await response.json();
+        const myBooking = data.find(b => String(b.phone).replace(/\D/g,'').includes(phoneInput.replace(/\D/g,'')));
+        
+        if (myBooking) {
+          const statusClass = (myBooking.status || 'Pending').toLowerCase();
+          res.innerHTML = `
+            <div class="status-success" style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 10px; border-left: 4px solid var(--primary-gold); margin-top: 15px;">
+              <p><strong>Hi ${myBooking.name}!</strong></p>
+              <p>Status: <span class="status-badge status-${statusClass}" style="background:rgba(212,175,55,0.1); padding: 2px 8px; border-radius:4px; font-size:0.8rem; border:1px solid var(--primary-gold);">${myBooking.status || 'Pending'}</span></p>
+              <p>Event Date: ${myBooking.date || 'To be confirmed'}</p>
+              <p>Package: ${myBooking.package || 'Custom'}</p>
+            </div>
+          `;
+        } else {
+          res.innerHTML = '<p style="color:var(--text-muted); margin-top:15px;">No booking found for this phone number. Please check the number or contact Neha.</p>';
+        }
+      } catch (e) {
+        res.innerHTML = '<p style="color:#ff4d4d; margin-top:15px;">Connection error. Please try again later.</p>';
+      }
+    }
+
+    window.onload = () => {
+      loadAvailability();
+    };
+  </script>
+</body>
+
+</html>

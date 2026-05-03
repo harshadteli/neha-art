@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Neha Mehndi Art. Contact us for bridal bookings, 3D mehndi consultations, and festival appointments in Kolhapur and beyond." />
+  <meta name="keywords" content="Contact Neha Mehndi Art, Book Mehndi Artist, Mehndi Artist WhatsApp, Bridal Henna Consultation" />
+  <meta property="og:title" content="Contact Us | Neha Mehndi Art" />
+  <meta property="og:description" content="Reach out to Neha for your bridal and special occasion mehndi bookings." />
+  <meta property="og:image" content="logo/logo.jpeg" />
+  <title>Contact Neha | Neha Mehndi Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css?v=125" />
+  <link rel="shortcut icon" href="https://harshadteli.github.io/neha-art/logo/logo.jpeg" type="image/x-icon">
+  <style>
+    :root {
+      --contact-gold: #E2C275;
+      --contact-bg: #080808;
+      --card-bg: rgba(20, 20, 20, 0.6);
+    }
+
+    .contact-page {
+      background-color: var(--contact-bg);
+      color: #fff;
+    }
+
+    /* ───────────────── HERO SECTION ───────────────── */
+    .contact-hero {
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #1a1a1a 0%, #080808 100%);
+      padding-top: 80px;
+    }
+
+    .contact-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 150px;
+      background: linear-gradient(to top, var(--contact-bg), transparent);
+      z-index: 2;
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle at center, rgba(226, 194, 117, 0.05) 0%, transparent 70%);
+      animation: pulse 8s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { transform: translate(-20%, -20%) scale(1); }
+      100% { transform: translate(10%, 10%) scale(1.1); }
+    }
+
+    .contact-hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+    }
+
+    .contact-hero h1 {
+      font-size: clamp(3rem, 10vw, 6rem);
+      margin-bottom: 1rem;
+    }
+
+    /* ───────────────── CONNECT SECTION ───────────────── */
+    .connect-section {
+      padding: 0 0 100px;
+      margin-top: -100px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .contact-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(226, 194, 117, 0.1);
+      border-radius: 30px;
+      padding: 3rem 2rem;
+      text-align: center;
+      transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-15px);
+      border-color: var(--contact-gold);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 30px rgba(226, 194, 117, 0.1);
+    }
+
+    .card-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(226, 194, 117, 0.1);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: var(--contact-gold);
+      margin-bottom: 1.5rem;
+      transition: all 0.4s ease;
+    }
+
+    .contact-card:hover .card-icon {
+      background: var(--contact-gold);
+      color: #000;
+      transform: rotate(10deg);
+    }
+
+    .contact-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-family: var(--font-heading);
+    }
+
+    .contact-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* ───────────────── MUST CALL BANNER ───────────────── */
+    .must-call-banner {
+      max-width: 1000px;
+      margin: 4rem auto;
+      background: linear-gradient(135deg, rgba(226, 194, 117, 0.1) 0%, rgba(20, 20, 20, 0.8) 100%);
+      border: 1px solid var(--contact-gold);
+      border-radius: 40px;
+      padding: 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .must-call-banner::before {
+      content: '✦';
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 2rem;
+      color: var(--contact-gold);
+      opacity: 0.3;
+    }
+
+    .must-call-banner h2 {
+      font-size: 2.5rem;
+      color: var(--contact-gold);
+      margin-bottom: 1rem;
+    }
+
+    .must-call-banner p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .call-pulse-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--contact-gold);
+      color: #000;
+      padding: 1.2rem 3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 0 30px rgba(226, 194, 117, 0.3);
+      animation: pulse-glow 2s infinite;
+    }
+
+    @keyframes pulse-glow {
+      0% { box-shadow: 0 0 0 0 rgba(226, 194, 117, 0.4); }
+      70% { box-shadow: 0 0 0 20px rgba(226, 194, 117, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(226, 194, 117, 0); }
+    }
+
+    /* ───────────────── RESPONSIVE ───────────────── */
+    @media (max-width: 768px) {
+      .contact-hero { height: 50vh; }
+      .must-call-banner { padding: 2rem 1.5rem; border-radius: 25px; margin: 2rem 1.5rem; }
+      .must-call-banner h2 { font-size: 1.8rem; }
+      .contact-grid { padding: 0 1rem; }
+    }
+  </style>
+</head>
+
+<body class="contact-page">
+  <!-- Mouse Trail Overlay -->
+  <canvas id="trailCanvas"></canvas>
+
+  <!-- ───────────────── NAVBAR ───────────────── -->
+  <nav id="navbar" class="scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="logo/logo.jpeg" alt="Logo" class="nav-logo" />
+        <span class="nav-title">Neha Mehndi Studio</span>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#hero" class="nav-link">Home</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="booking.html" class="nav-link">Book Now</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="memories.html" class="nav-link">Memories</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        <li><a href="admin.html" class="nav-link admin-link" target="_blank" title="Admin Portal"><i class="fa-solid fa-user-gear"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ───────────────── HERO ───────────────── -->
+  <section class="contact-hero">
+    <div class="hero-glow"></div>
+    <div class="contact-hero-content">
+      <p class="section-tag" style="letter-spacing: 5px;">✦ GET IN TOUCH ✦</p>
+      <h1>Let's <span class="gold-text">Connect</span></h1>
+    </div>
+  </section>
+
+  <!-- ───────────────── CONNECT ───────────────── -->
+  <section class="connect-section">
+    <div class="contact-grid">
+      <!-- Call Card -->
+      <a href="tel:+919112911729" class="contact-card">
+        <div class="card-icon"><i class="fa-solid fa-phone-volume"></i></div>
+        <h3>Direct Call</h3>
+        <p>Call Neha for instant booking and consultation details.</p>
+        <span class="gold-text" style="margin-top: 1rem; font-weight: 600;">+91 9112911729</span>
+      </a>
+
+      <!-- WhatsApp Card -->
+      <a href="https://wa.me/919112911729" target="_blank" class="contact-card">
+        <div class="card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <h3>WhatsApp</h3>
+        <p>Chat with us for custom designs and pricing inquiries.</p>
+        <span class="gold-text" style="margin-top: 1rem; font-weight: 600;">Message Now</span>
+      </a>
+
+      <!-- Instagram Card -->
+      <a href="https://www.instagram.com/neha_mehndi_art05?igsh=MTJoZHlycGgwb2gyNQ==" target="_blank" class="contact-card">
+        <div class="card-icon"><i class="fa-brands fa-instagram"></i></div>
+        <h3>Instagram</h3>
+        <p>Follow our latest work and join our artistic community.</p>
+        <span class="gold-text" style="margin-top: 1rem; font-weight: 600;">@neha_mehndi_art05</span>
+      </a>
+
+      <!-- Gmail Card -->
+      <a href="mailto:nehasutar733@gmail.com" class="contact-card">
+        <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+        <h3>Email Us</h3>
+        <p>For corporate events and business collaborations.</p>
+        <span class="gold-text" style="margin-top: 1rem; font-weight: 600;">nehasutar733@gmail.com</span>
+      </a>
+    </div>
+
+    <!-- Important Instruction -->
+    <div class="must-call-banner">
+      <h2>Important <span class="gold-text">Note</span></h2>
+      <p>
+        For more detailed discussions, custom bridal packages, and availability confirmation, 
+        <strong>you must directly call Neha</strong>. Personal communication ensures the best 
+        artistic experience for your special day.
+      </p>
+      <a href="tel:+919112911729" class="call-pulse-btn">
+        <i class="fa-solid fa-phone"></i> Call Neha Now
+      </a>
+    </div>
+  </section>
+
+  <!-- ───────────────── FOOTER ───────────────── -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="logo/logo.jpeg" alt="Logo" class="footer-logo" />
+        <p class="footer-tagline">Crafting memories, one stroke at a time.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/neha_mehndi_art05?igsh=MTJoZHlycGgwb2gyNQ==" aria-label="Instagram" class="social-link" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#services">Services & Pricing</a></li>
+          <li><a href="about.html">About Neha</a></li>
+          <li><a href="memories.html">Our Memories</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Mahe, Karveer Taluka, Kolhapur District, Maharashtra-416001, India</p>
+        <p><i class="fa-solid fa-phone"></i> +91 9112911729</p>
+        <p><i class="fa-solid fa-envelope"></i> nehasutar733@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Neha Mehndi Art. All Rights Reserved.</p>
+      <div style="margin-top: 10px; border-top: 1px solid rgba(212, 175, 55, 0.1); padding-top: 10px;">
+        <marquee behavior="scroll" direction="left" scrollamount="5" style="color: var(--primary-gold); font-size: 0.75rem;">
+          <i class="fa-solid fa-code"></i> Developed by: <strong>HarshTech  Solutions</strong> &nbsp;&nbsp; | &nbsp;&nbsp; 
+          <i class="fa-solid fa-envelope"></i> harshadteli697@gmail.com &nbsp;&nbsp; | &nbsp;&nbsp; 
+          <i class="fa-solid fa-phone"></i> +91 9970898012
+        </marquee>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ───────────────── FLOATING CHATBOT ───────────────── -->
+  <div id="chatbotBubble" class="chatbot-bubble" title="Chat with Neha's Assistant">
+    <span class="chatbot-icon">🤖</span>
+    <span class="chatbot-pulse"></span>
+  </div>
+  <div id="chatbotPanel" class="chatbot-panel glass-card" style="display:none">
+    <div class="chatbot-header">
+      <img src="logo/logo.jpeg" alt="Logo" class="chatbot-logo" />
+      <div>
+        <strong>Neha's AI Assistant</strong>
+        <span class="chatbot-status">Online</span>
+      </div>
+      <button class="chatbot-close" id="closeChatbot">&times;</button>
+    </div>
+    <div class="chatbot-messages" id="chatMessages">
+      <div class="bot-msg">
+        👋 Namaste! I'm Neha's virtual assistant. I can help you with:<br />
+        • <b>Pricing</b> &amp; <b>Packages</b><br />
+        • <b>Booking</b> an appointment<br />
+        • <b>Mehndi types</b> &amp; designs<br />
+        How can I help you today?
+      </div>
+    </div>
+    <div class="chatbot-quick-btns">
+      <button onclick="quickReply('pricing')">💰 Pricing</button>
+      <button onclick="quickReply('book')">📅 Book Now</button>
+      <button onclick="quickReply('types')">🎨 Mehndi Types</button>
+      <button onclick="quickReply('contact')">📞 Contact</button>
+    </div>
+    <div class="chatbot-input-row">
+      <input type="text" id="chatInput" placeholder="Type your message…" />
+      <button id="chatSendBtn" onclick="sendChat()">➤</button>
+    </div>
+  </div>
+
+  <!-- ───────────────── FLOATING CALL BUTTON ───────────────── -->
+  <div id="callBtn" class="call-btn" title="Connect with Neha">
+    <span class="call-icon"><i class="fa-solid fa-phone"></i></span>
+    <span class="call-pulse"></span>
+  </div>
+  <div id="callPanel" class="call-panel glass-card" style="display:none">
+    <button class="panel-close" id="closeCallPanel">&times;</button>
+    <div class="panel-header">
+      <p><strong>Connect with Neha</strong></p>
+      <span>Quick Response Guaranteed</span>
+    </div>
+    
+    <a href="tel:+919112911729" class="call-option tel-call">
+      <i class="fa-solid fa-phone-volume"></i> Call Directly
+    </a>
+    <a href="https://wa.me/919112911729?text=Hi%20Neha!%20I%20want%20to%20book%20a%20Mehndi%20appointment." class="call-option whatsapp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp Me
+    </a>
+    <a href="https://www.instagram.com/neha_mehndi_art05?igsh=MTJoZHlycGgwb2gyNQ==" class="call-option instagram" target="_blank">
+      <i class="fa-brands fa-instagram"></i> Instagram DM
+    </a>
+    <a href="mailto:nehasutar733@gmail.com" class="call-option email">
+      <i class="fa-solid fa-envelope"></i> Send Email
+    </a>
+  </div>
+
+  <!-- ───────────────── BACK TO TOP ───────────────── -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="config.js?v=126"></script>
+  <script src="main.js?v=126"></script>
+</body>
+
+</html>

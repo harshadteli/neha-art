@@ -1,0 +1,122 @@
+That changes everything—in a great way! Using a 3D video as the background or the "environment" for the site creates a cinematic experience that static images can't match.
+
+Since you have the video, we will use it as a Video Texture in Three.js or as a synchronized Hero Background. Here is the updated prompt and the technical roadmap to make this happen using HTML/CSS/JS and GAS.
+
+🚀 The Updated Master Prompt
+Paste this into your AI coder to generate the project structure:
+
+System Role: Expert Creative Developer (Three.js & Google Apps Script).
+
+Task: Build a unique 3D Mehndi Design Website where a provided 3D Video in the 3d folder one by one used according to you acts as the immersive environment.
+
+1. Core Visuals (HTML5 & Three.js):
+
+Video Integration: Use the video as a THREE.VideoTexture mapped onto a large sphere or cylinder surrounding the scene, creating a "3D Room" effect.
+
+Floating Gallery: Overlay a 3D moving gallery (using planes) that displays Mehndi photos. When the user scrolls, the planes should move in Z-depth.
+
+Glassmorphism: All UI elements (Chatbot, Inquiry Form) must use a semi-transparent blur effect to blend with the video background.
+
+2. The Talking AI Chatbot:
+
+Logic: Use a floating "Assistant" bubble.
+
+Voice: Implement window.speechSynthesis. When the bot replies to text, it must speak the answer aloud.
+
+Data: The bot should know: Service rates, Mehndi types (Bridal, Arabic), and the "Book Now" process.
+
+3. Admin & Backend (GAS):
+
+Database: Use Google Sheets to store Contact/Inquiry data.
+
+Admin Panel: A dashboard to view inquiries and a "Photo Upload" button that pushes images to a Google Drive folder and updates the site gallery instantly.
+
+📂 Project Structure (Summary)
+index.html: The skeleton and the <video> tag (hidden).
+
+style.css: Gold accents, custom fonts (like 'Playfair Display'), and Glassmorphism.
+
+main.js: Three.js setup, the 3D Gallery movement, and the Voice Chatbot logic.
+
+admin.html: The dashboard for the owner to see inquiries.
+
+Code.gs: The Google Apps Script that connects your site to Google Sheets/Drive.
+
+💡 Pro-Tip for "Unique" UI
+Since it's a Mehndi site, ask the AI to add a "Trail Effect." As the user moves their mouse over your 3D video background, have small "Henna Mandalas" or gold sparkles appear and fade away. It makes the site feel interactive and premium.
+
+Would you like me to generate the full Code.gs (Google Apps Script) backend for you now so you can start saving inquiries to a Sheet?
+
+
+
+
+
+
+o keep your 3D website clean and immersive, the Contact Form and Call Inquiry features shouldn't just be boring boxes—they should feel like part of the 3D world.
+
+Here is the specific, high-level prompt to generate the code for these features.
+
+📝 The "Front-End Interaction" Prompt
+Copy and paste this to generate the user-facing forms:
+
+System Role: Senior UI/UX Developer.
+
+Task: Create a high-end, responsive "Contact Us" form and "Call Inquiry" system for a 3D Mehndi website using HTML, CSS (Tailwind or Glassmorphism), and JavaScript.
+
+1. The Floating 3D Contact Form:
+
+Design: Use a Glassmorphism effect (transparent background with a heavy blur). The form should appear to float in the center of the 3D video environment.
+
+Fields: Name, Phone Number, Event Date, and a "Type of Mehndi" dropdown (Bridal, Arabic, Custom).
+
+Animation: When the form opens, use a "pop-in" animation. Use gold-glowing borders for the input fields.
+
+Success Action: On submission, the form should dissolve into a "Success" message, and the Text-to-Speech (TTS) Chatbot should say: "Thank you! Your inquiry has been sent. We will contact you soon."
+
+2. The Smart Call Inquiry Feature:
+
+Trigger: Create a floating, pulsating "Gold Phone" icon at the bottom-right of the screen.
+
+Functionality: When clicked, it should:
+
+Trigger a background JavaScript function to log the "Call Intent" to the Google Sheet (via GAS).
+
+Immediately open the phone's native dialer (tel:) or provide a WhatsApp option.
+
+3. Connectivity:
+
+Use the fetch() API to send data to a Google Apps Script Web App URL without reloading the page.
+
+🛡️ The "Admin Panel Inquiry Manager" Prompt
+Copy and paste this to generate the system where the business owner sees the leads:
+
+System Role: Full-Stack Developer (Admin Dashboards).
+
+Task: Build a private, mobile-friendly Admin Panel to manage inquiries coming from the 3D Mehndi website.
+
+1. The Lead Dashboard:
+
+Contact Us View: A table showing all form submissions. Include a "Click-to-Call" button next to every phone number so the admin can call the client instantly.
+
+Call Inquiry Log: A separate list showing how many people clicked the "Call" button on the website, including the time and date of the click.
+
+2. Interactive Controls:
+
+Status Toggles: Add buttons to mark a lead as "Interested," "Booked," or "Done."
+
+Real-time Updates: Add a "Refresh" button that pulls the latest data from the Google Sheet using google.script.run.
+
+3. Modern UI:
+
+Style the dashboard with a clean "Dark Mode" aesthetic using Gold accents to match the brand. Ensure it is fully responsive for use on an iPhone/Android.
+
+🤖 Which Models & Why?
+Feature	Recommended Model	Why?
+Visual Form Design	Claude 3.5 Sonnet	It has the best eye for "Glassmorphism" and modern CSS styling.
+Logic & Scripting	Gemini 1.5 Pro	Excellent at writing the bridge between your website and the Google Apps Script (GAS) backend.
+Text-to-Speech Bot	Web Speech API	Use standard JavaScript; no extra AI model is needed, making the site faster and free to run.
+💡 Pro-Feature: The "Intelligent" Lead
+When you use these prompts, ask the AI to include "Source Tracking." This tells the admin if the person contacted them while looking at a specific design in the 3D gallery.
+
+Example: The admin sees: "Ananya Sharma inquired while viewing the 'Royal Bridal 3D Gallery'." This gives the business owner a huge advantage! 
+
