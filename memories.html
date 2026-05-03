@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore our gallery of beautiful memories. Cinematic videos and stunning 3D Mehndi designs that capture the essence of your special moments." />
+  <meta name="keywords" content="Mehndi Gallery, 3D Mehndi Portfolio, Cinematic Mehndi Videos, Neha Mehndi Art Memories" />
+  <meta property="og:title" content="Our Memories | Neha Mehndi Art" />
+  <meta property="og:description" content="A visual journey through Neha's most beautiful bridal and 3D mehndi creations." />
+  <meta property="og:image" content="logo/logo.jpeg" />
+  <title>Our Memories | Neha Mehndi Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css?v=125" />
+  <link rel="shortcut icon" href="https://harshadteli.github.io/neha-art/logo/logo.jpeg" type="image/x-icon">
+  <style>
+    :root {
+      --memory-gold: #E2C275;
+      --memory-bg: #050505;
+    }
+
+    .memories-page {
+      background-color: var(--memory-bg);
+    }
+
+    /* ───────────────── CINEMATIC HEADER ───────────────── */
+    .memories-hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 100px;
+      padding-bottom: 80px;
+    }
+
+    .hero-bg-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(226, 194, 117, 0.1) 0%, transparent 70%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .memories-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 2rem;
+    }
+
+    .memories-hero h1 {
+      font-size: clamp(3.5rem, 7vw, 5.5rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .memories-video-showcase {
+      position: relative;
+      width: 100%;
+      max-width: 1100px;
+      margin: 3rem auto 0;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(226, 194, 117, 0.3);
+      box-shadow: 0 50px 100px rgba(0, 0, 0, 0.9), 0 0 50px rgba(226, 194, 117, 0.1);
+      transform: perspective(2000px) rotateX(2deg);
+      transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .memories-video-showcase:hover {
+      transform: perspective(2000px) rotateX(0deg) scale(1.01);
+      border-color: rgba(226, 194, 117, 0.6);
+    }
+
+    .memories-video-showcase video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ───────────────── STORYLINE SECTION ───────────────── */
+    .memory-storyline {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--memory-gold), transparent);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      margin-bottom: 80px;
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 50%;
+    }
+
+    .timeline-item:nth-child(even) {
+      justify-content: flex-start;
+      padding-right: 0;
+      padding-left: 50%;
+    }
+
+    .timeline-content {
+      width: 85%;
+      padding: 2.5rem;
+      background: rgba(20, 20, 20, 0.6);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      border: 1px solid rgba(226, 194, 117, 0.1);
+      position: relative;
+      transition: all 0.4s ease;
+    }
+
+    .timeline-content:hover {
+      border-color: var(--memory-gold);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(226, 194, 117, 0.05);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      top: 30px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+      background: var(--memory-gold);
+      border-radius: 50%;
+      z-index: 5;
+      box-shadow: 0 0 20px var(--memory-gold);
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+      left: -10px;
+      right: auto;
+    }
+
+    .timeline-year {
+      font-family: var(--font-heading);
+      color: var(--memory-gold);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    /* ───────────────── SIGNATURE GALLERY ───────────────── */
+    .signature-moments {
+      padding: 100px 0;
+      background: linear-gradient(to bottom, transparent, #080808, transparent);
+    }
+
+    .moments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .moment-card {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      cursor: pointer;
+    }
+
+    .moment-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s ease;
+    }
+
+    .moment-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .moment-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .moment-card:hover .moment-overlay {
+      opacity: 1;
+    }
+
+    .video-mute-btn {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(20, 20, 20, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--memory-gold);
+      color: var(--memory-gold);
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-mute-btn:hover {
+      background: var(--memory-gold);
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    /* ───────────────── RESPONSIVE ───────────────── */
+    @media (max-width: 768px) {
+      .memories-hero {
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 4rem;
+      }
+
+      .memories-hero h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .memories-video-showcase {
+        width: 100%;
+        max-width: 100%;
+        /* Ensure it doesn't overflow */
+        margin: 2rem auto 0;
+        border-radius: 12px;
+        transform: none !important;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .video-mute-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+        bottom: 0.6rem;
+        right: 0.6rem;
+        border-width: 1px;
+      }
+
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item {
+        padding-right: 0 !important;
+        padding-left: 50px !important;
+        justify-content: flex-start !important;
+        margin-bottom: 50px;
+      }
+
+      .timeline-content {
+        width: 100%;
+        padding: 1.5rem;
+      }
+
+      .timeline-dot {
+        left: 10px !important;
+        right: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="memories-page">
+  <!-- Mouse Trail Overlay -->
+  <canvas id="trailCanvas"></canvas>
+
+  <!-- ───────────────── NAVBAR ───────────────── -->
+  <nav id="navbar" class="scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="logo/logo.jpeg" alt="Logo" class="nav-logo" />
+        <span class="nav-title">Neha Mehndi Studio</span>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#hero" class="nav-link">Home</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="booking.html" class="nav-link">Book Now</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="memories.html" class="nav-link active">Memories</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="admin.html" class="nav-link admin-link" target="_blank" title="Admin Portal"><i
+              class="fa-solid fa-user-gear"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ───────────────── HERO SHOWCASE ───────────────── -->
+  <section class="memories-hero">
+    <div class="hero-bg-glow"></div>
+    <div class="memories-hero-content">
+      <p class="section-tag" style="letter-spacing: 5px;">✦ OUR JOURNEY ✦</p>
+      <h1>Beautiful <span class="gold-text">Memories</span></h1>
+      <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.1rem; margin-bottom: 2rem;">
+        Every stroke tells a story of love, tradition, and celebration. Journey through our most cherished
+        creations and the memories we've crafted for our beautiful brides.
+      </p>
+
+      <div class="memories-video-showcase">
+        <video id="memoryVideo" src="3d/memory.mp4" autoplay muted loop playsinline></video>
+        <button id="muteToggle" class="video-mute-btn" title="Toggle Sound">
+          <i class="fa-solid fa-volume-xmark"></i>
+        </button>
+        <div class="video-overlay"></div>
+        <div class="video-glow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── TIMELINE ───────────────── -->
+  <section class="memory-storyline">
+    <div class="container">
+      <div class="section-header text-center" style="margin-bottom: 4rem;">
+        <h2 style="font-size: 3rem;">A Legacy of <span class="gold-text">Art</span></h2>
+        <p style="color: var(--text-muted);">Tracing back the evolution of Neha's signature style.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2022</span>
+            <h3>The Beginning</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+              Starting with a passion for traditional henna, Neha began her journey by crafting intricate bridal
+              designs that captured the heart of every client.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2023</span>
+            <h3>The 3D Evolution</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+              Pioneering the 3D interactive mehndi style in the region, bringing a modern cinematic
+              dimension to the ancient art form.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <h3>Signature Legacy</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+              With over 50+ successful bridal assignments, Neha Mehndi Art became a symbol of
+              premium quality and artistic excellence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── SIGNATURE MOMENTS ───────────────── -->
+  <section class="signature-moments">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">✦ THE COLLECTION ✦</p>
+        <h2>Signature <span class="gold-text">Moments</span></h2>
+      </div>
+
+      <div class="moments-grid">
+        <div class="moment-card">
+          <img src="images/m2.jpeg" alt="Moment 1" />
+          <div class="moment-overlay">
+            <h4 style="color: var(--memory-gold);">Bridal Elegance</h4>
+            <p style="font-size: 0.8rem; color: #ccc;">A perfect blend of tradition and modern flair.</p>
+          </div>
+        </div>
+        <div class="moment-card">
+          <img src="images/m10.jpeg" alt="Moment 2" />
+          <div class="moment-overlay">
+            <h4 style="color: var(--memory-gold);">Royal Arabic</h4>
+            <p style="font-size: 0.8rem; color: #ccc;">Bold strokes defining artistic boundaries.</p>
+          </div>
+        </div>
+        <div class="moment-card">
+          <img src="images/m13.jpeg" alt="Moment 3" />
+          <div class="moment-overlay">
+            <h4 style="color: var(--memory-gold);">Floral Fusion</h4>
+            <p style="font-size: 0.8rem; color: #ccc;">Nature's beauty captured in henna.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── FOOTER ───────────────── -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="logo/logo.jpeg" alt="Logo" class="footer-logo" />
+        <p class="footer-tagline">Crafting memories, one stroke at a time.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/neha_mehndi_art05?igsh=MTJoZHlycGgwb2gyNQ==" aria-label="Instagram" class="social-link" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#services">Services & Pricing</a></li>
+          <li><a href="about.html">About Neha</a></li>
+          <li><a href="memories.html">Our Memories</a></li>
+          <li><a href="contact.html">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Mahe, Karveer Taluka, Kolhapur District, Maharashtra-416001, India</p>
+        <p><i class="fa-solid fa-phone"></i> +91 9112911729</p>
+        <p><i class="fa-solid fa-envelope"></i> nehasutar733@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Neha Mehndi Art. All Rights Reserved.</p>
+      <div style="margin-top: 10px; border-top: 1px solid rgba(212, 175, 55, 0.1); padding-top: 10px;">
+        <marquee behavior="scroll" direction="left" scrollamount="5"
+          style="color: var(--primary-gold); font-size: 0.75rem;">
+          <i class="fa-solid fa-code"></i> Developed by: <strong>HarshTech  Solutions</strong> &nbsp;&nbsp; | &nbsp;&nbsp;
+          <i class="fa-solid fa-envelope"></i> harshadteli697@gmail.com &nbsp;&nbsp; | &nbsp;&nbsp;
+          <i class="fa-solid fa-phone"></i> +91 9970898012
+        </marquee>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ───────────────── FLOATING CHATBOT ───────────────── -->
+  <div id="chatbotBubble" class="chatbot-bubble" title="Chat with Neha's Assistant">
+    <span class="chatbot-icon">🤖</span>
+    <span class="chatbot-pulse"></span>
+  </div>
+  <div id="chatbotPanel" class="chatbot-panel glass-card" style="display:none">
+    <div class="chatbot-header">
+      <img src="logo/logo.jpeg" alt="Logo" class="chatbot-logo" />
+      <div>
+        <strong>Neha's AI Assistant</strong>
+        <span class="chatbot-status">Online</span>
+      </div>
+      <button class="chatbot-close" id="closeChatbot">&times;</button>
+    </div>
+    <div class="chatbot-messages" id="chatMessages">
+      <div class="bot-msg">
+        👋 Namaste! I'm Neha's virtual assistant. I can help you with:<br />
+        • <b>Pricing</b> &amp; <b>Packages</b><br />
+        • <b>Booking</b> an appointment<br />
+        • <b>Mehndi types</b> &amp; designs<br />
+        How can I help you today?
+      </div>
+    </div>
+    <div class="chatbot-quick-btns">
+      <button onclick="quickReply('pricing')">💰 Pricing</button>
+      <button onclick="quickReply('book')">📅 Book Now</button>
+      <button onclick="quickReply('types')">🎨 Mehndi Types</button>
+      <button onclick="quickReply('contact')">📞 Contact</button>
+    </div>
+    <div class="chatbot-input-row">
+      <input type="text" id="chatInput" placeholder="Type your message…" />
+      <button id="chatSendBtn" onclick="sendChat()">➤</button>
+    </div>
+  </div>
+
+  <!-- ───────────────── FLOATING CALL BUTTON ───────────────── -->
+  <div id="callBtn" class="call-btn" title="Connect with Neha">
+    <span class="call-icon"><i class="fa-solid fa-phone"></i></span>
+    <span class="call-pulse"></span>
+  </div>
+  <div id="callPanel" class="call-panel glass-card" style="display:none">
+    <button class="panel-close" id="closeCallPanel">&times;</button>
+    <div class="panel-header">
+      <p><strong>Connect with Neha</strong></p>
+      <span>Quick Response Guaranteed</span>
+    </div>
+    
+    <a href="tel:+919112911729" class="call-option tel-call">
+      <i class="fa-solid fa-phone-volume"></i> Call Directly
+    </a>
+    <a href="https://wa.me/919112911729?text=Hi%20Neha!%20I%20want%20to%20book%20a%20Mehndi%20appointment." class="call-option whatsapp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp Me
+    </a>
+    <a href="https://www.instagram.com/neha_mehndi_art05?igsh=MTJoZHlycGgwb2gyNQ==" class="call-option instagram" target="_blank">
+      <i class="fa-brands fa-instagram"></i> Instagram DM
+    </a>
+    <a href="mailto:nehasutar733@gmail.com" class="call-option email">
+      <i class="fa-solid fa-envelope"></i> Send Email
+    </a>
+  </div>
+
+  <!-- ───────────────── BACK TO TOP ───────────────── -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="config.js?v=126"></script>
+  <script src="main.js?v=126"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const video = document.getElementById('memoryVideo');
+      const muteBtn = document.getElementById('muteToggle');
+      const icon = muteBtn.querySelector('i');
+
+      muteBtn.addEventListener('click', () => {
+        if (video.muted) {
+          video.muted = false;
+          icon.classList.replace('fa-volume-xmark', 'fa-volume-high');
+          muteBtn.style.background = 'var(--memory-gold)';
+          muteBtn.style.color = '#000';
+        } else {
+          video.muted = true;
+          icon.classList.replace('fa-volume-high', 'fa-volume-xmark');
+          muteBtn.style.background = 'rgba(20, 20, 20, 0.6)';
+          muteBtn.style.color = 'var(--memory-gold)';
+        }
+      });
+
+      // Ensure autoplay starts muted (browser policy)
+      video.muted = true;
+      video.play().catch(err => console.log("Autoplay blocked:", err));
+    });
+  </script>
+</body>
+
+</html>
