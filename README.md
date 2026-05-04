@@ -5,6 +5,12 @@
 [![Tech Stack](https://img.shields.io/badge/Stack-HTML%20%7C%20CSS%20%7C%20JS%20%7C%20GAS-blue.svg)](#)
 <center><img src="images/banner.png" alt="software-banner-image" width="100%" height="auto"/>
 <br/>
+  # For the Desktop
+  <center><img src="3d/1.jpeg" alt="E404" height="300px" width="auto"/></center>
+  # For the Tablet
+   <center><img src="3d/2.jpeg" alt="E404"height="300px" width="auto"/></center>
+  # For the Mobile
+    <center><img src="3d/3.jpeg" alt="E404" height="300px" width="auto"/></center>
 <a href="https://nehaart.vercel.app">
   <img src="https://img.shields.io/badge/Live_Project-View_Now-brightgreen?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Project"/>
 </a>
